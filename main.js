@@ -1,14 +1,13 @@
 // Tenemos un li de productos
 
 const productos = [
-  {nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "./taco-negro.jpg"},
-  {nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "./taco-azul.jpg"},
-  {nombre: "Bota negra", tipo: "bota", color: "negro", img: "./bota-negra.jpg"},
-  {nombre: "Bota azul", tipo: "bota", color: "azul", img: "./bota-azul.jpg"},
-  {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"},
-  {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: ""}
+  {nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "./public/taco-negro.jpg"},
+  {nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "./public/taco-azul.jpg"},
+  {nombre: "Bota negra", tipo: "bota", color: "negro", img: "./public/bota-negra.jpg"},
+  {nombre: "Bota azul", tipo: "bota", color: "azul", img: "./public/bota-azul.jpg"},
+  {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./public/zapato-rojo.jpg"},
 ]
-
+//Modificacion de rutas por creacion de carpeta public 
 
 const lista = document.getElementById("lista-de-productos") //Cambie getElementByName, Cambie nombre li --> lista
 const input = document.querySelector("input"); // cambie $i--> input, Cambie '.input' --> "input"
@@ -39,7 +38,7 @@ for (let i = 0; i < productos.length; i++) {
 const botonDeFiltro = document.querySelector("button");
 
 //  Todas estas acciones se ejecutan al epicar el boton
-botonDeFiltro.onclick = displayProductos = (productos) =>  { // displayProductos(productos)
+botonDeFiltro.onclick = () =>  { // displayProductos(productos)
   //1) eliminar productos del Display
   while (lista.firstChild) {
     lista.removeChild(lista.firstChild);
